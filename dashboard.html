@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body class="text-[#3a3939] bg-cyan-200 w-full">
+    <div>
+        <aside class="flex-col justify-between border border-gray-700 items-center px-[40px] py-[20px] fixed h-[100dvh] top-0 left-0 w-75  max-lg:w-55 hidden md:flex ">
+            <h1 class="text-[1.7rem] font-bold   max-lg:text-[1.3rem] text-nowrap mt-6">Expenses Tracker</h1>
+            <div class="flex gap-2 navLinks max-xl:gap-[5px] flex-col w-[100%]">
+                <a href="dashboard.html"  class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)]">Dashboard</a>
+                <a href="Index.html"  class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)]">Home</a>
+                <a href="Transactions.html" class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)]">Transactions</a>
+                <a href="#" class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)]">Account</a>
+                <a href="#" class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)]">Report</a>
+                <a href="#" class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)]">Setting</a>
+                
+            </div>
+
+            <a href="profile.html"  class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)] flex gap-4 text-[18px] items-center">
+                <img src="https://cdn.wallpapersafari.com/67/44/FH0LVU.jpg" alt="profileImg" class=" w-7 h-7 rounded-full bg-gray-300"  >
+                Profile
+            </a>
+            
+    
+        </aside> 
+        
+        <nav class="hidden justify-between items-center p-[30px] bg-cyan-100 h-[100px] max-sm:h-[60px] max-md:flex ">
+            <h1 class="text-gray-700 font-bold text-[1.5rem] max-md:text-[1.3rem]">Expenses Tracker</h1>
+            <div>
+               <i class="fa-solid fa-bars text-gray-700 text-[1.7rem] max-sm:text-[1.4rem] "></i>
+            </div>
+        </nav>
+
+
+        <main class="ml-75 px-[5rem] py-[3rem] max-md:ml-0 max-sm:px-[20px] scale-90 bg-cyan-100 rounded-[50px] shadow-md shadow-gray-200" >
+            <div class="grid grid-cols-4 gap-7 max-lg:grid-cols-2  max-lg:gap-2 max-[30rem]:mt-6">
+                <div class="p-2 flex flex-col border border-slate-500 justify-center gap-y-3 items-center shadow-md shadow-gray-600 rounded-lg font-bold max-sm:gap-y-1">
+                    <p class="text-[1.6rem] max-lg:text-[1.1rem] max-[30rem]:text-[0.9rem]">Total Balance</p>
+                    <p class="text-[1.4rem] max-[30rem]:text-[1rem]">&#8377<span>30,000</span></p>
+                </div>
+
+                <div class="p-2 flex flex-col border border-slate-500 justify-center gap-y-3 items-center shadow-md shadow-gray-600 rounded-lg font-bold">
+                    <p class="text-[1.6rem] max-lg:text-[1.1rem] max-[30rem]:text-[0.9rem]">Total Expenses</p>
+                    <p class="text-[1.4rem] max-[30rem]:text-[1rem]">&#8377<span>60,000</span></p>
+                </div>
+
+                <div class="p-2 flex flex-col border border-slate-500 justify-center gap-y-3 items-center shadow-md shadow-gray-600 rounded-lg font-bold">
+                    <p class="text-[1.6rem] max-lg:text-[1.1rem] max-[30rem]:text-[0.9rem]">Total Income</p>
+                    <p class="text-[1.4rem] max-[30rem]:text-[1rem]">&#8377<span>90,000</span></p>
+                </div>
+
+                <div class="p-2 flex flex-col border border-slate-500 justify-center gap-y-3 items-center shadow-md shadow-gray-600 rounded-lg font-bold">
+                    <p class="text-[1.6rem] max-lg:text-[1.1rem] max-[30rem]:text-[0.9rem]">Savings</p>
+                    <p class="text-[1.4rem] max-[30rem]:text-[1rem]">&#8377<span>5,000</span></p>
+                </div>
+            </div>
+
+            <!-- Overview Chart -->
+            <div class="relative mt-30 w-[700px] max-w-[calc(100%-20px)] border border-gray-600 py-10 px-[5px] rounded-md cursor-pointer mx-auto max-[30rem]:mt-10">
+                <p class="text-center font-bold text-[1.2rem] mt-7">Monthly Overview Chart</p>
+                <select class="appearance-none absolute top-3 right-[10%]  text-[#5e5c5c] font-bold py-2 border rounded-[50px] text-center  w-40 border-gray-800 ">
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                </select>
+                <span class="absolute top-5 right-[15%]">
+                    ▼
+                </span>
+ 
+                <div class="flex gap-6 items-center justify-center mt-10"> 
+                    <div>
+                        <div class="flex h-80 border border-slate-800 w-[60px] items-end max-lg:w-[30px] ">
+                            <div class="h-[80%] w-[50%] bg-slate-500"></div>
+                            <div  class="h-[20%] w-[50%] bg-slate-600"></div>
+                        </div>
+                        <span>Jan</span>
+                    </div>
+                    
+                    <div>
+                        <div class="flex h-80  border border-slate-800 w-[60px] items-end max-lg:w-[30px]">
+                            <div class="h-[85%] w-[50%] bg-slate-500"></div>
+                            <div  class="h-[15%] w-[50%] bg-slate-600"></div>
+                        </div>
+                        <span>Feb</span>
+                    </div>
+
+
+                    <div>
+                        <div class="flex h-80 border border-slate-800 w-[60px] items-end max-lg:w-[30px]">
+                            <div class="h-[70%] w-[50%] bg-slate-500"></div>
+                            <div  class="h-[30%] w-[50%] bg-slate-600"></div>
+                        </div>
+                        <span>March</span>
+                    </div>
+                     
+                    <div>
+                        <div class="flex h-80  border border-slate-800 w-[60px] items-end max-lg:w-[30px]">
+                            <div class="h-[50%] w-[50%] bg-slate-500"></div>
+                            <div  class="h-[50%] w-[50%] bg-slate-600"></div>
+                        </div>
+                        <span>April</span>
+                    </div>
+                </div>
+                <div class="flex gap-5 mt-10 justify-center">
+                    <div class="flex gap-1 items-center">
+                        <div class="w-4 h-4 bg-slate-500 "></div>
+                        <span class="font-semibold">Income</span>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <div class="w-4 h-4 bg-slate-600"></div>
+                        <span class="font-semibold">Expenses</span>
+                    </div>
+                </div>
+                
+
+            </div> 
+            <div class="overflow-x-auto mt-10">
+                <table class=" w-[100%]  font-bold border-collapse border border-gray-950 overflow-x-auto" >
+                <caption class="text-[1.2rem]">Transactions history</caption>
+                    <thead>
+                        <th class="py-3 px-2 border border-gray-950 text-left max-[23.12rem]:text-[0.8rem] text-nowrap">Date</th>
+                        <th class="py-3 px-2 border border-gray-950 text-left max-[23.12rem]:text-[0.8rem] text-nowrap">Remark</th>
+                        <th class="py-3 px-2 border border-gray-950 text-left max-[23.12rem]:text-[0.8rem] text-nowrap">Type</th>
+                        <th class="py-3 px-2 border border-gray-950 text-left max-[23.12rem]:text-[0.8rem] text-nowrap">Amount</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                            <tr>
+                            <td class="p-2  border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">05th May 2026 <br/>02:00PM</td>
+                            <td class="p-2  border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">Food</td>
+                            <td class="p-2  border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">Expense</td>
+                            <td class="p-2 border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">&#8377<span>300</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-2 border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">03rd May 2026 <br/>10:30AM</td>
+                            <td class="p-2 border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">Travel</td>
+                            <td class="p-2 border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">Expense</td>
+                            <td class="p-2 border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">&#8377<span>1,000</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="p-2 border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">01st May 2026 <br/>09:00PM</td>
+                            <td class="p-2 border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">Salary</td>
+                            <td class="p-2 border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">Income</td>
+                            <td class="p-2 border border-gray-950 text-left max-[23.12rem]:text-[0.7rem] text-nowrap">&#8377<span>10,000</span></td>
+                        </tr>
+                    </tbody>
+
+                </table>  
+            </div> 
+                
+            </div>
+        </main>
+</body>
+</html>

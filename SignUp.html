@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up-Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+        -moz-appearance: textfield;
+        }
+        input:focus{
+            outline: none;
+            background: none;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgba(45, 16, 108, 0.5);
+            transition: 0.3s;
+            transform: scale(1.02);
+        }
+        @media (max-width:500px){
+            button{
+                font-size: 0.9rem;
+                
+            }
+            input::placeholder{
+                 font-size: 0.9rem;
+            }
+            label{
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body class="grid place-content-center bg-cyan-200 ">
+        <div class="w-130 bg-white mt-[20px] py-3 border border-[#d1cfcf] rounded-md max-sm:w-[100%]" >
+            <h1 class="text-center m-0.5 font-bold text-gray-800 text-[25px]">Sign Up</h1>
+            <p class="text-center font-semibold text-gray-800 text-[14px]">Start tracking your expenses effortlessly</p>
+        
+        
+            <div class="px-[5rem] py-[1.5rem] max-md:py-[40px] max-[32.25rem]:p-[35px] ">
+            <form >
+                <div class=" flex flex-col gap-6 ">
+                    <!-- <label for="name" class="font-bold font-sans text-green-600 text-[1.1rem]">Name:</label> -->
+                    <div class="flex gap-2 justify-center items-center p-[10px] py-[5px] shadow-md rounded-md  border border-gray-400">
+                        <i class="fa-solid fa-user text-[17px]  text-gray-700 max-[32.2rem]:text-[14px]"></i>
+                        <input type="text" 
+                            id="user"
+                            name="user"
+                            class="p-[2px] px-0 flex-1 placeholder:text-gray-600 font-medium "
+                            placeholder="Enter Your name"  
+                        />
+                    </div>
+                
+                
+                
+                    <!-- <label for="date" class="font-bold font-sans text-green-600 text-[1.1rem]">DOB:</label> -->
+                    <div class="flex gap-2 justify-center items-center p-[10px] py-[5px] shadow-md rounded-md  border border-gray-400">
+                        <i class="fa-solid fa-calendar text-[17px]  text-gray-700 max-[32.2rem]:text-[14px]"></i>
+                        <input type="number" 
+                            id="age"
+                            name="age"
+                            placeholder="Age"
+                            class="p-[2px] px-0 flex-1 placeholder:text-gray-600 font-medium "
+                        />
+                    </div>
+                
+
+                
+                    <!-- <label for="date" class="font-bold font-sans text-green-600 text-[1.1rem]">DOB:</label> -->
+                    <div class="flex gap-2 justify-center items-center p-[10px] py-[5px] shadow-md rounded-md  border border-gray-400">
+                        <i class="fa-solid fa-phone text-[17px]  text-gray-700 max-[32.2rem]:text-[14px]"></i>
+                        <input type="number"
+                            id="contact"
+                            name="contact"
+                            placeholder="Phone Number"
+                            class="p-[2px] px-0 flex-1 placeholder:text-gray-600 font-medium "
+                        />
+                    </div>
+                
+                
+
+                
+                    <!-- <label for="email" class="font-bold font-sans text-green-600 text-[1.1rem]">Email:</label> -->
+                    <div class="flex gap-2 justify-center items-center p-[10px] py-[5px] shadow-md rounded-md border border-gray-400">
+                        <i class="fa-solid fa-envelope text-[17px] text-gray-700 max-[32.2rem]:text-[14px]"></i>
+                        <input type="email" 
+                            id="email"
+                            name="email"
+                            class="  p-[2px] px-0 flex-1 placeholder:text-gray-600 font-medium"
+                            placeholder="Enter Your email" 
+                        />
+                    </div>
+                
+
+                
+                    <!-- <label for="password" class="font-bold font-sans text-green-600 text-[1.1rem]">Password</label> -->
+                    <div class=" relative flex gap-2 justify-center items-center p-[10px] py-[5px] shadow-md rounded-md border border-gray-400">
+                        <i class="fa-solid fa-lock text-[17px] text-gray-700 max-[32.2rem]:text-[14px]" ></i>
+                        <input type="password"
+                        id="password"
+                        name="password"
+                        class=" p-[2px] px-0 flex-1  placeholder:text-gray-600 font-medium "
+                        placeholder="Create Password"   />
+                       <i class="fa-solid fa-eye absolute top-[50%] left-[87%] -translate-y-1/2 text-gray-700 "></i>
+                    </div>
+                    
+
+                    <div class="flex gap-1 ">
+                        <p class="font-bold font-sans text-green-600 text-[1.1rem] mr-7">Gender:</p>
+                        <div class="flex gap-3 items-center">
+
+                            <div>
+                                <input type="radio" 
+                                id="male"
+                                name="action"
+                                />
+                                <label for="male">Male</label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" 
+                                id="female"
+                                name="action"
+                                />
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="w-[100%] p-[8px] mt-[7px] bg-green-500 rounded-md text-white font-bold">
+                           SignUp
+                        </button>
+                        <p class="text-center">Already have an account.<a href="SignIn.html" class="text-blue-800 font-semibold">Login</a></p>
+                    </div>
+                    
+                    
+                    <p class="relative border-t-2 mt-[10px]">
+                        <span class="absolute -top-6 left-[50%] -translate-x-1/2  font-bold text-[20px] p-2  bg-white">
+                            or
+                        </span>
+                    </p>
+                
+                    <button 
+                        class="w-[100%] mt-[10px] p-[8px] bg-slate-800 rounded-md text-gray-100 font-semibold  flex justify-center gap-4 ">
+                        <img src="google.png" alt="image" class="w-[25px]">
+                        Sign Up with Google
+                    </button>
+
+                    
+                    
+              </div>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>

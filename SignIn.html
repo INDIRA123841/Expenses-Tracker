@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In-Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        input:focus{
+            outline: none;
+            background: none;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgba(45, 16, 108, 0.5);
+            transition: 0.3s;
+            transform: scale(1.02);
+        }
+        @media (max-width:500px){
+            button{
+                font-size: 0.9rem;
+                
+            }
+            input::placeholder{
+                 font-size: 0.9rem;
+            }
+            label{
+                font-size: 0.9rem;
+            }
+            
+
+        }
+    </style>
+</head>
+<body class="grid place-content-center bg-cyan-200 ">
+    <div class="flex gap-5  shadow-lg shadow-blue-200  my-[80px] w-[900px] bg-slate-100 rounded-[10px] overflow-hidden max-md:flex-col max-md:w-[80%] max-md:mx-auto max-md:my-[20px] max-sm:gap-0 max-sm:bg-transparent max-[32.25rem]:w-[95%]">
+        <div class="p-[5rem]  bg-zinc-50 flex flex-col justify-center items-center w-[500px] max-md:w-[100%] max-md:bg-transparent max-sm:p-[2rem] ">
+            <h1 class=" text-[2rem] font-bold text-blue-900 max-md:text-[1.7rem] max-sm:text-[1.4rem]">LOGIN</h1>
+            <h2 class="mt-1 text-[1.6rem] font-semibold text-slate-600 max-md:text-[1.2rem] max-sm:text-[1rem]
+            ">Welcome Back!🤝</h2>
+            <br />
+            <p class="text-justify text-gray-700 font-medium text-[1rem] max-md:[0.8rem] max-sm:text-[0.7rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt inventore, quibusdam nemo obcaecati cupiditate animi quas omnis aspernatur voluptatum, enim earum non dolores molestias adipisci!</p>
+
+        </div>
+        
+        
+        <form action="" class="p-[5rem] flex flex-col gap-5  max-md:py-[40px] max-[32.25rem]:p-[40px]">
+            <div class="flex flex-col gap-2 ">
+                <label for="email" class="font-bold font-sans text-green-600 text-[1.1rem]">Email:</label>
+                <div class="flex gap-2 justify-center items-center p-[10px] py-[5px] shadow-md rounded-md  border border-gray-400">
+                   <i class="fa-solid fa-envelope text-[17px] text-gray-700 max-[32.2rem]:text-[14px]"></i>
+                   <input 
+                    type="email" 
+                    id="email"
+                    name="email"
+                    class="p-[4px] px-0 flex-1 placeholder:text-gray-600 font-medium"
+                    placeholder="Enter Your email"  />
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="password" class="font-bold font-sans text-green-600 text-[1.1rem]">Password</label>
+                <div class=" relative flex gap-2 justify-center items-center p-[10px] py-[5px] shadow-md rounded-md  border border-gray-400">
+                   <i class="fa-solid fa-lock text-[17px] text-gray-700 max-[32.2rem]:text-[14px]" ></i>
+                   <input type="password"
+                    id="password"
+                    name="password"
+                    class=" p-[4px] px-0 flex-1  placeholder:text-gray-600 font-medium placeholder:max-[32.25rem]:text-[15px]"
+                    placeholder="Enter Your Password"   />
+                   <i class="fa-solid fa-eye absolute top-[50%] left-[87%] -translate-y-1/2 text-gray-700 "></i>
+                </div>
+            </div>
+
+            <button class="w-[100%] p-[8px] mt-[10px] bg-green-500 rounded-md text-white font-bold">
+                Login
+            </button>
+            <p class="text-center max-[32.25rem]:text-[12px]">Don't have an account? <a href="SignUp.html" class="text-blue-800">Sign-Up</a></p>
+            <p class="relative border-t-2 mt-[20px]">
+                <span class="absolute -top-6 left-[50%] -translate-x-1/2  font-bold text-[20px] p-2  bg-slate-100  max-sm:bg-gray-200">
+                    or
+                </span>
+            </p>
+            <button 
+                class="w-[100%] mt-[20px] p-[8px] bg-slate-600 rounded-md text-gray-100 font-semibold ">
+                Sign In with Google
+            </button>
+            
+        </form>
+    </div>
+</body>
+</html>

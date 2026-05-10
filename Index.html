@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        @media (max-width:900px){
+            .navLinks{
+                display: none;
+            }
+            .user{
+                display: none;
+            }
+            .menu{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="flex justify-between items-center p-[30px] bg-cyan-600 h-[100px] max-sm:h-[60px] ">
+        <h1 class="text-[1.7rem] text-[#fff] font-serif max-sm:text-[1.3rem]">Expenses Tracker</h1>
+        <div class="flex gap-[5rem] justify-between navLinks max-xl:gap-[2rem]">
+            <a href="#" class="text-white font-bold hover:text-blue-600 hover:scale-110 transition-all">Home</a>
+            <a href="dashboard.html" class="text-white font-bold hover:text-blue-600 hover:scale-110 transition-all">Dashboard</a>
+            <a href="Transactions.html" class="text-white font-bold hover:text-blue-600 hover:scale-110 transition-all">Transactions</a>
+            <a href="#" class="text-white font-bold hover:text-blue-600 hover:scale-110 transition-all">About Us</a>
+            <a href="#" class="text-white font-bold hover:text-blue-600 hover:scale-110 transition-all">Setting</a>
+            
+        </div>
+        <div class="user flex items-center gap-1 cursor-pointer">
+            
+            <a href="profile.html"><i class="fa-regular fa-user  text-white text-[1.2rem] hover:text-blue-700 transition-all"></i></a>
+        </div>
+        <div class="hidden menu">
+           <i class="fa-solid fa-bars text-white text-[1.7rem] max-sm:text-[1.4rem] "></i>
+        </div>
+        
+        
+    </nav>
+    <header>
+        
+        <div class="bg-white border border-gray-300 w-220 max-w-[calc(100%-40px)] mx-auto my-[3rem] p-[20px] rounded-md shadow-sm">
+            <form class="space-y-4">
+                <div class="flex justify-between gap-2 p-[20px] max-[32.25rem]:flex-col max-[32.25rem]:items-center">
+                    <div class="relative  flex w-50 p-[5px] border border-gray-700    bg-white min-w-0 rounded-sm">
+                        <select name="category" id="category"  class=" rounded-md text-gray-900 appearance-none flex-1 outline-none">
+                            <option value="test1">Category1</option>
+                            <option value="test2">Category2</option>
+                            <option value="test3">Category3</option>
+                        </select>
+                        <span class="absolute right-2 top-1/2 -translate-y-1/2">
+                            ▼
+                        </span>
+                    </div>
+
+                    <div class="flex items-center gap-2 ">
+                        <div>
+                            <input type="radio" id="debit" name="action"/> 
+                            <label for="debit" class="font-bold text-[#9d0533] text-[1.2rem]">DEBIT</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="cr" name="action"/>
+                            <label for="cr" class="font-bold text-[#9d0533] text-[1.2rem]">CREDIT</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col ">
+                    <label for="remark" class="text-[0.9rem] font-bold ">Remark</label>
+                    <input type="text" 
+                    id="remark"
+                    name="remark"
+                    class="border border-gray-300 h-10 px-[20px] rounded-sm"
+                    placeholder="Remark"   
+                    />
+                </div>
+
+                
+                <div class="flex gap-2 items-end max-sm:flex-col max-sm:items-start max-sm:gap-4">
+                    <div class="relative flex flex-1 max-sm:w-[100%]">
+                        <select name="method" id="method" class="px-2 border border-gray-300 rounded-sm  h-10 appearance-none flex-1 outline-none">
+                            <option>Select Payment Method</option>
+                            <option value="upi">UPI</option>
+                            <option value="cash">Cash</option>
+                            <option value="netBanking">Net banking</option>
+                        </select>
+                        <span class="absolute right-2 top-1/2 -translate-y-1/2">
+                            ▼
+                        </span>
+                    </div>
+                    
+
+                     <div class="flex flex-col">
+                        <label for="date" class="text-[0.9rem] font-bold ">Date of Transaction</label>
+                        <input type="date" 
+                                id="date"
+                                name="date"
+                                class="border border-gray-300 h-10 px-[20px] rounded-sm"
+                        />
+                     </div>
+                  </div>
+
+                  <div class="flex items-end gap-3">
+                  <div class="flex flex-col flex-1 min-w-0">
+                    <label for="amount" class="text-[0.9rem] font-bold ">Amount</label>
+                    <input type="text" 
+                    id="amount"
+                    name="amount"
+                    class="border border-gray-300 h-10 px-[20px] rounded-sm"
+                    placeholder="Amount"   
+                    />
+                  </div>
+
+                  
+
+                  <button 
+                  type="submit"
+                  class=" bg-blue-400
+                  h-10 w-30 rounded-sm text-gray-100 font-bold cursor-pointer hover:bg-blue-500 hover:text-white transition-all ">+Add
+                 </button>
+                </div>
+
+            </form>
+        </div>
+    </header>
+    <div class=" w-220 max-w-[calc(100%-40px)] mx-auto my-[3rem] p-[20px] rounded-md flex gap-7 justify-center items-center max-[32.25rem]:gap-2">
+        <!-- <button class="px-5 border border-gray-400 rounded-md  h-10 w-30  shadow-md shadow-gray-400 text-[1rem] font-semibold cursor-pointer hover:bg-blue-200 transition-all hover:-translate-y-2">
+            +Add New 
+        </button> -->
+
+        <button class="px-5 border border-gray-400 rounded-md  h-10 w-30  shadow-md shadow-gray-400 text-[1rem] font-semibold cursor-pointer hover:bg-blue-200 transition-all hover:-translate-y-2">
+            All
+        </button>
+
+        <button  class="px-5 border border-gray-400 rounded-md  h-10 w-30 shadow-md shadow-gray-400 text-[1rem] font-semibold cursor-pointer hover:bg-blue-200 transition-all hover:-translate-y-2">
+            Income
+        </button>
+
+        <button  class="px-5 border border-gray-400 rounded-md  h-10 w-30 shadow-md shadow-gray-400 text-[1rem] font-semibold cursor-pointer hover:bg-blue-200 transition-all hover:-translate-y-2">
+            Expenses
+        </button>
+    </div>
+    <section>
+        <h2 class="text-center text-[#000000] text-[1.6rem] font-bold max-[26.2rem]:text-[1.3rem] max-sm:text-[1.4rem]">Recent Transactions<i class="fa-solid fa-bag-shopping"></i> </h2>
+        
+            
+            <div class="flex flex-col gap-5 ">
+                <div class=" p-[10px] border border-gray-400 rounded-md shadow-md shadow-gray-400  flex items-start gap-5 justify-between w-200 mx-auto  max-w-[calc(100%-20px)]">
+                    <div>
+                        <p class="font-bold text-[1.2rem] max-sm:text-[0.9rem]">Category:<span>Travel</span></p>
+                        <p class="font-bold text-[1rem] max-sm:text-[0.9rem]">Date:<span class="font-mono font-bold text-green-700 ">1st May 2026</p>
+                        <p class="font-mono font-bold text-green-700 max-sm:text-[0.9rem]">Time:11:00AM</p>
+                    </div>
+                    
+                    <div>
+                       <p class="font-bold text-[1.2rem] max-sm:text-[0.9rem]">Amount:-<span>&#8377</span>1,000</p>
+                       <p class="font-bold text-[1rem] max-sm:text-[0.9rem]">Method:<span>UPI</span></p>
+                    </div>
+                    
+                </div>
+
+                <div class=" p-[10px] border border-gray-400 rounded-md shadow-md shadow-gray-400  flex items-start gap-5 justify-between w-200 mx-auto  max-w-[calc(100%-20px)]">
+                    <div>
+                        <p class="font-bold text-[1.2rem] max-sm:text-[0.9rem]">Category:<span>Groceries</span></p>
+                        <p class="font-bold text-[1rem] max-sm:text-[0.9rem]">Date:<span class="font-mono font-bold text-green-700 ">3rd May 2026</span></p>
+                        <p class="font-mono font-bold text-green-700 max-sm:text-[0.9rem]">Time:9:00AM</p>
+                    </div>
+                    
+                    <div>
+                       <p class="font-bold text-[1.2rem] max-sm:text-[0.9rem]">Amount:-<span>&#8377</span>1,000</span></p>
+                       <p class="font-bold text-[1rem] max-sm:text-[0.9rem]">Method:<span>Cash</span></p>
+                    </div>
+                   
+                </div>
+
+                <div class=" p-[10px] border border-gray-400 rounded-md shadow-md shadow-gray-400  flex items-start gap-5 justify-between w-200 mx-auto  max-w-[calc(100%-20px)]">
+                    <div>
+                        <p class="font-bold text-[1.2rem] max-sm:text-[0.9rem]">Category:<span>Food</span></p>
+                        <p class=" font-bold  text-[1rem] max-sm:text-[0.9rem]">Date:<span class="font-mono font-bold text-green-700 ">29th April 2026</span></p>
+                        <p class="font-mono font-bold text-green-700 max-sm:text-[0.9rem]">Time:2:00PM</p>
+                    </div>
+                    
+                    <div>
+                       <p class="font-bold text-[1.2rem] max-sm:text-[0.9rem]">Amount:-<span>&#8377</span>270</span></p>
+                       <p class="font-bold text-[1rem] max-sm:text-[0.9rem]">Method:<span>UPI</span></p>
+                    </div>
+                    
+                </div>
+
+                <div class=" p-[10px] border border-gray-400 rounded-md shadow-md shadow-gray-400  flex items-start gap-5 justify-between w-200 mx-auto max-w-[calc(100%-20px)]">
+                    <div>
+                        <p class="font-bold text-[1.2rem] max-sm:text-[0.9rem]">Category:<span>Salary</span></p>
+                        <p class="font-bold text-[1rem] max-sm:text-[0.9rem]">Date:<span class="font-mono font-bold text-green-700 ">20th April 2026</span></p>
+                        <p class="font-mono font-bold text-green-700 ">Time:10:00AM</p>
+                    </div>
+                    
+                    <div>
+                       <p class="font-bold text-[1.2rem] max-sm:text-[0.9rem]">Amount:+<span>&#8377</span>20,000</p>
+                       <p class="font-bold text-[1rem] max-sm:text-[0.9rem]">Method:<span>UPI</span></p>
+                    </div>
+                    
+                </div>
+
+        
+                
+            </div>
+            <div>
+               <a href="Transactions.html" class="bg-slate-50 rounded-sm border border-gray-100 shadow-md text-blue-700 mt-4 font-semibold hover:bg-slate-50 grid place-content-center py-2">View All</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

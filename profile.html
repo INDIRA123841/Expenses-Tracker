@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        
+    </style>
+</head>
+<body  >
+    <div class="text-[#3a3939]  bg-cyan-200 w-full overflow-x-hidden">
+
+        <aside class="flex-col justify-between border border-gray-700 items-center px-[40px] py-[20px] fixed h-full top-0 left-0 w-75  max-lg:w-55 flex max-[53rem]:hidden">
+            <div class="flex flex-col gap-5 w-[100%] items-center">
+                <h1 class="text-[1.4rem] font-bold  text-nowrap mt-6 ">Expenses Tracker</h1>
+                <div class="flex gap-2 navLinks max-xl:gap-[5px] flex-col w-[100%]">
+                    <a href="#"  class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)] max-lg:text-[0.7rem]">Dashboard</a>
+                    <a href="#"  class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)] max-lg:text-[0.7rem]">Home</a>
+                    <a href="#" class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)] max-lg:text-[0.7rem]">Transactions</a>
+                    <a href="#" class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)] max-lg:text-[0.7rem]">Account</a>
+                    <a href="#" class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)] max-lg:text-[0.7rem]">Report</a>
+                    <a href="#" class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)] max-lg:text-[0.7rem]">Setting</a>
+                
+                </div>
+            </div>
+            <div class=" flex flex-col gap-5 w-[100%] ">
+                <a  class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)] flex gap-4  items-center max-lg:text-[0.7rem]" href="SignUp.html">Create New Account</a>
+                <a  class=" hover:text-blue-950 transition-all hover:scale-110 font-semibold border border-slate-500 rounded-md w-[100%] p-2  hover:bg-[rgba(232,231,235,0.4)] flex gap-4  items-center max-lg:text-[0.7rem]" href="SignIn.html">Log out</a>
+            </div>
+        </aside>
+        
+        <nav class="hidden justify-between items-center p-[30px] bg-white h-[90px] max-sm:h-[60px] max-[53rem]:flex ">
+            <h1 class="font-bold text-[1.3rem]">Expenses Tracker</h1>
+            <div>
+               <i class="fa-solid fa-bars text-[1.7rem] max-sm:text-[1.4rem] "></i>
+            </div>
+        </nav>
+
+       
+        <!-- Profile -->
+        
+            <main class=" py-[5rem]  ml-75 max-[53rem]:ml-0 max-lg:p-2 relative ">
+                <!-- Recent transactions -->
+                <div class="absolute top-40 right-10 max-xl:hidden">
+                    <p class="text-center mb-3 text-[1.3rem] font-semibold  border border-gray-400 p-2">Recent Transactions</p>
+                    <table class="border-2 border-gray-400 rounded-[10px]">
+                        <tbody>
+                            <tr>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">05th May 2026 <br/>02:00PM</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">Food</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">Expense</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">&#8377<span>300</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">03rd May 2026 <br/>10:30AM</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">Travel</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">Expense</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">&#8377<span>1,000</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">01st May 2026 <br/>09:00PM</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">Salary</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">Income</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">&#8377<span>10,000</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">30th April 2026 <br/>09:00PM</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">Food</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">Expense</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">&#8377<span>500</span></td>
+                            </tr>
+
+
+                            <tr>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">28th April 2026 <br/>09:00PM</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">Business Profit</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">Income</td>
+                                <td class="p-3 border border-gray-400 text-left max-[23.12rem]:text-[0.7rem] text-nowrap font-bold">&#8377<span>2,000</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="Transactions.html" class="grid place-content-center mx-auto text-blue-800 font-semibold text-[1.1rem] py-5 hover:text-blue-600 hover:scale-105 transition-all">View All</a>
+                </div>
+
+                
+                <div>
+                    <div class=" w-170  rounded-sm  ml-20  max-w-[calc(100%-50px)] max-sm:ml-10">
+                        <div class="flex items-center gap-2 max-sm:ml-0 max-sm:w-full  max-[20rem]:flex-col max-sm:mb-6">
+                            <img src="https://cdn.wallpapersafari.com/67/44/FH0LVU.jpg" alt="profile" class="rounded-full h-40 w-40 border-3 border-[#373535] shadow-md max-sm:w-30 max-sm:h-30 max-[30rem]:w-20 max-[30rem]:h-20">
+                            <div class="flex gap-[5px] flex-col items-start justify-center m-[10px] max-sm:mt-5">
+
+                                <h1 class="font-bold text-[1.7rem]  max-sm:text-[1.2rem] text-nowrap max-md:text[1.4rem]">UserName</h1>
+                                <p class="font-semibold text-[1rem] max-sm:text[0.8rem]">example@gmail.com</p>
+                                <p class="max-sm:text-[0.7rem]">Joined Date-29/12/2025</p>
+                                <div class="flex gap-2 mt-2 max-sm:gap-[5px]">
+                                    <button class="mt-6 p-1 shadow-sm border border-gray-400 font-semibold px-5 rounded-md  cursor-pointer hover:translate-y-1 transition-transform duration-200 max-lg:text-[0.6rem]  text-nowrap max-sm:px-2">Edit Profile </button>
+                                    <button class="mt-6 p-1 shadow-sm border border-gray-400 font-semibold px-5 rounded-md  cursor-pointer hover:translate-y-1 transition-transform duration-200 max-lg:text-[0.6rem] text-nowrap max-sm:px-2">+Add Transaction</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </div>
+
+                    <div>
+                       <a href="Transactions.html" class="text-blue-950 font-semibold text-[0.9rem] px-3 border border-blue-900 rounded-sm  place-content-center hidden max-lg:grid w-40 mx-auto">Recent Transactions</a>
+                    </div>
+                
+
+                    <div class="ml-20 p-[2rem] mt-20  rounded-[20px]  w-140 border border-gray-400 max-lg:ml-15 max-w-[calc(100%-70px)] max-md:ml-10">
+                        <h3 class="text-left text-[1.5rem]  p-1 font-bold max-sm:text-[1.1rem] text-gray-600">Personal Information</h3>
+                        <div class="flex gap-25 mt-5 justify-left max-[32.25rem]:flex-col max-[32.25rem]:gap-[5px]">
+                            <div class="grid gap-4 max-sm:gap-1" >
+                                <p class="text-[1.2rem] font-semibold max-sm:text-[1rem] text-nowrap text-gray-600">Fullname 
+                                    <br/>
+                                    <span>Indira Ng</span>
+                                </p>
+                                <p class="text-[1.2rem] font-semibold max-sm:text-[1rem] text-nowrap text-gray-600">Age
+                                    <br/>
+                                    <span>20</span>
+                                </p>
+                            
+                            </div>
+
+                            <div class="grid gap-4">
+                                <p class="text-[1.2rem] font-semibold  max-sm:text-[1rem] text-nowrap text-gray-600">Phone Number 
+                                    <br/>
+                                    <span>9897120172</span>
+                                </p>
+                                <p class="text-[1.2rem] font-semibold  max-sm:text-[1rem] text-nowrap text-gray-600">Gender
+                                    <br/>
+                                    <span>Female</span>
+                                </p>
+                            
+                            </div>
+                            
+
+
+                        </div>
+                    
+                    </div>
+
+                    <!-- Total -->
+                    <div class="flex mt-8 p-4  gap-4 w-170 ml-20 max-w-[calc(100%-50px)] max-lg:ml-0 max-md:ml-10 max-lg:justify-center  max-[32.25rem]:gap-2 max-[32.25rem]:flex-col">
+                        <div class="h-30 p-5 shadow-sm shadow-gray-500 rounded-lg flex flex-col justify-center items-center gap-[7px] hover:border-3 border-gray-400 transition-all duration-300 cursor-pointer hover:scale-95 max-[32.25rem]:h-20">
+                            <h2 class="font-bold  text-[1.2rem]  mt-2 max-md:text-[0.8rem] text-nowrap">Total Balance</h2>
+                            <p class="text-[1.7rem] font-bold max-md:text-[0.8rem]">&#8377<span>30,000</span></p>
+                        </div>
+
+                        <div class="h-30 p-5   shadow-sm shadow-gray-500 rounded-lg flex flex-col justify-center items-center gap-1 hover:border-3 border-gray-400 transition-all duration-300 cursor-pointer hover:scale-95 max-[32.25rem]:h-20 ">
+                            <h2 class="font-bold text-[1.2rem]  mt-2 max-md:text-[0.8rem] text-nowrap">Total Expenses</h2>
+                            <p class="text-[1.7rem] font-bold max-md:text-[0.8rem]">&#8377<span>60,000</span></p>
+                        </div>
+
+                        <div class="h-30 p-5  shadow-sm shadow-gray-500 rounded-lg flex flex-col justify-center items-center gap-1 hover:border-3 border-gray-400 transition-all duration-300 cursor-pointer hover:scale-95 max-[32.25rem]:h-20 ">
+                            <h2 class="font-bold  text-[1.2rem]  mt-2 max-md:text-[0.8rem] text-nowrap">Total Income</h2>
+                            <p class="text-[1.7rem] font-bold max-md:text-[0.8rem]">&#8377<span>90,000</span></p>
+                        </div>
+                    </div>
+                
+                    
+            </main>
+
+
+
+
+           
+    
+        
+    </div>   
+</body>
+</html>
